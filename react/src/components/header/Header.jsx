@@ -1,3 +1,7 @@
+import LogoSVG from './../../assets/images/logo.svg';
+import LogoPNG from './../../assets/images/logo.png';
+import a3 from './../../assets/images/a3.jpg';
+
 export default function Header() {
   return (
     <div className="app-header white lt box-shadow-z1">
@@ -10,27 +14,8 @@ export default function Header() {
           <i className="material-icons">menu</i>
         </a>
         <a href="index.html" className="navbar-brand md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 48 48"
-            width="32"
-            height="32"
-          >
-            <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)" />
-            <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color" />
-            <circle cx="24" cy="24" r="10" fill="#ffffff" />
-            <circle
-              cx="13"
-              cy="13"
-              r="2"
-              fill="#ffffff"
-              class="brand-animate"
-            />
-            <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
-            <circle cx="24" cy="24" r="3" fill="#000000" />
-          </svg>
-
-          <img src="images/logo.png" alt="." className="hide" />
+          <img src={LogoSVG} alt="Your SVG" />
+          <img src={LogoPNG} alt="." className="hide" />
           <span className="hidden-folded inline">pulse</span>
         </a>
 
@@ -57,7 +42,7 @@ export default function Header() {
           <li className="nav-item dropdown">
             <a href="#" className="nav-link clear" data-toggle="dropdown">
               <span className="avatar w-32">
-                <img src="images/a3.jpg" alt="..." />
+                <img src={a3} alt="..." />
               </span>
             </a>
             <div className="dropdown-menu w dropdown-menu-scale pull-right">

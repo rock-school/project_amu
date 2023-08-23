@@ -1,6 +1,5 @@
 (function ($, MODULE_CONFIG) {
-  	"use strict";
-  
+
 	$.fn.uiJp = function(){
 
         return this.each(function()
@@ -12,7 +11,7 @@
 			if (options && $.isPlainObject(options[0])) {
 				options[0] = $.extend({}, JP_CONFIG[attr], options[0]);
 			}
-			
+
 			if(self[attr]){
 				self[attr].apply(self, options);
 			}else{

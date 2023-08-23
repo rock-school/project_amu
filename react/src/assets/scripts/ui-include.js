@@ -1,6 +1,5 @@
 (function ($) {
-  	"use strict";
-  	
+
 	var promise = false,
 		deferred = $.Deferred();
 	$.fn.uiInclude = function(){
@@ -8,14 +7,14 @@
 			promise = deferred.promise();
 		}
 		//console.log('start: includes');
-		
+
 		compile(this);
 
 		function compile(node){
 			node.find('[ui-include], [data-ui-include]').each(function(){
 				var that = $(this),
 					url  = that.attr('ui-include') || that.attr('data-ui-include');
-				promise = promise.then( 
+				promise = promise.then(
 					function(){
 						//console.log('start: compile '+ url);
 						var request = $.ajax({

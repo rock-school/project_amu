@@ -1,6 +1,6 @@
 (function ($, MODULE_CONFIG) {
-  	"use strict";
-  
+
+
 	$.fn.taburl = function(){
 
 		var plugin  = this;

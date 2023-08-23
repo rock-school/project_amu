@@ -1,7 +1,6 @@
 (function ($) {
-  "use strict";
 
-  uiLoad.load("src/assets/libs/screenfull/dist/screenfull.min.js");
+  uiLoad.load("./src/assets/libs/screenfull/dist/screenfull.min.js");
   $(document).on(
     "click",
     "[ui-fullscreen], [data-ui-fullscreen]",

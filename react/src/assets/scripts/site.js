@@ -1,5 +1,4 @@
 (function ($) {
-	'use strict';
 
     // btn more
     $(document).on('click.site', '.btn-more', function(e) {
@@ -17,7 +16,7 @@
       }
 
     });
-    
+
     $(document).on('click.site', '#search-result a', function(e) {
       $(this).closest('.modal').modal('hide');
     });

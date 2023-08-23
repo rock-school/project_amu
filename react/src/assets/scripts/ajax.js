@@ -1,7 +1,6 @@
 (function ($) {
-	'use strict';
 
-    
+
     $('[ui-jp], [data-ui-jp]').uiJp();
     $('body').uiInclude();
 
@@ -21,7 +20,7 @@
         $('body').removeClass('modal-open').find('.modal-backdrop').remove();
         $('.navbar-toggleable-sm').collapse('hide');
     });
-    
+
     if ($.support.pjax) {
       $.pjax.defaults.maxCacheLength = 0;
       var container = $('#view');
@@ -37,12 +36,12 @@
       });
       // fix js
       $(document).on('pjax:end', function(event) {
-        
+
         $(event.target).find('[ui-jp], [data-ui-jp]').uiJp();
         $(event.target).uiInclude();
 
         $( document ).trigger( "pjaxEnd" );
-        
+
         init();
       });
     }

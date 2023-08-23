@@ -1,6 +1,6 @@
 (function ($) {
-	"use strict";
-	
+
+
     $(document).on('click', '[ui-toggle-class], [data-ui-toggle-class]', function (e) {
         e.preventDefault();
         var $self = $(this);

@@ -1,5 +1,4 @@
 (function ($) {
-	'use strict';
 
 	  window.app = {
       name:'pulse',
@@ -14,7 +13,7 @@
     var setting = 'jqStorage-'+app.name+'-Setting',
         storage = $.localStorage,
         color;
-    
+
     if( storage.isEmpty(setting) ){
         storage.set(setting, app.setting);
     }else{
@@ -42,10 +41,10 @@
 
       $('[data-target="folded"] input').prop('checked', app.setting.folded);
       $('[data-target="container"] input').prop('checked', app.setting.container);
-      
+
       if(color != app.setting.color){
-        uiLoad.remove('css/theme/'+color+'.css');
-        uiLoad.load('css/theme/'+app.setting.color+'.css');
+        uiLoad.remove('./src/assets/css/theme/'+color+'.css');
+        uiLoad.load('./src/assets/css/theme/'+app.setting.color+'.css');
         color = app.setting.color;
       }
     }

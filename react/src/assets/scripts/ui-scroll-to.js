@@ -1,5 +1,4 @@
 (function ($) {
-	"use strict";
   	$.extend( jQuery.easing,{
 	    def: 'easeOutQuad',
 	    easeInOutExpo: function (x, t, b, c, d) {

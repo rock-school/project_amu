@@ -7,7 +7,7 @@
 window.mep = window.mep || {};
 
 (function( window, $, undefined )  {
-	'use strict';
+
 
 	var $window = $( window ),
 		mep = window.mep;
@@ -68,7 +68,7 @@ window.mep = window.mep || {};
 				$media = $playlist.find( '.mep-audio, audio, .mep-video, video' ),
 				$data = $playlist.find( '.mep-playlist-data, script' ),
 				data, i, trackCount;
-			
+
 			if ( ! $data.length ) {
 				$data = $playlist.closest( settings.mepSelectors.container ).find( '.mep-playlist-data, script' );
 			}
@@ -188,7 +188,7 @@ window.mep = window.mep || {};
 
 //artwork
 (function( window, $, undefined ) {
-	'use strict';
+
 
 	$.extend( MediaElementPlayer.prototype, {
 		buildmepartwork: function( player, controls, layers ) {
@@ -211,7 +211,7 @@ window.mep = window.mep || {};
 
 //current detail
 (function( window, $, undefined ) {
-	'use strict';
+
 
 	$.extend( MediaElementPlayer.prototype, {
 		buildmepcurrentdetails: function( player, controls, layers ) {
@@ -235,7 +235,7 @@ window.mep = window.mep || {};
 
 // history
 (function( window, $, undefined ) {
-	'use strict';
+
 
 	var historySuccess, originalSuccess,
 		mePlayerInit = mejs.MediaElementPlayer.prototype.init;
@@ -424,7 +424,7 @@ window.mep = window.mep || {};
 
 // icons
 (function( window, $, undefined ) {
-	'use strict';
+
 
 	// Add this feature after all controls have been built.
 	$.extend( MediaElementPlayer.prototype, {
@@ -442,7 +442,7 @@ window.mep = window.mep || {};
 
 // next
 (function( window, $, mep, undefined ) {
-	'use strict';
+
 
 	$.extend( MediaElementPlayer.prototype, {
 		buildmepnexttrack: function( player, controls, layers, media ) {
@@ -482,7 +482,7 @@ window.mep = window.mep || {};
 
 // playlist
 (function( window, $, undefined ) {
-	'use strict';
+
 
 	var current, playTimeoutId;
 
@@ -577,7 +577,7 @@ window.mep = window.mep || {};
 			// Play the next track when one ends.
 			$media.on( 'ended.mep', function() {
 				var index = player.mepCurrentTrack + 1 >= player.options.mepPlaylistTracks.length ? 0 : player.mepCurrentTrack + 1;
-				
+
 				if(player.options.mepPlaylistRepeat){
 					index = player.mepCurrentTrack;
 					player.mepSetCurrentTrack(index);
@@ -725,7 +725,7 @@ window.mep = window.mep || {};
 
 // toggle playlist
 (function( window, $, mep, undefined ) {
-	'use strict';
+
 
 	$.extend( mejs.MepDefaults, {
 		mepPlaylistToggle: function( $tracklist, player ) {
@@ -769,7 +769,7 @@ window.mep = window.mep || {};
 
 // prev
 (function( window, $, mep, undefined ) {
-	'use strict';
+
 
 	$.extend( MediaElementPlayer.prototype, {
 		buildmepprevioustrack: function( player, controls, layers, media ) {
@@ -812,7 +812,7 @@ window.mep = window.mep || {};
 
 // repeat
 (function( window, $, mep, undefined ) {
-	'use strict';
+
 
 	$.extend( MediaElementPlayer.prototype, {
 		buildmeprepeat: function( player, controls, layers, media ) {
@@ -840,7 +840,7 @@ window.mep = window.mep || {};
 
 // shuffle
 (function( window, $, mep, undefined ) {
-	'use strict';
+
 
 	$.extend( MediaElementPlayer.prototype, {
 		buildmepshuffle: function( player, controls, layers, media ) {
@@ -868,12 +868,12 @@ window.mep = window.mep || {};
 
 // like
 (function( window, $, undefined ) {
-  'use strict';
+
 
   $.extend( MediaElementPlayer.prototype, {
     buildmeplike: function( player, controls, layers ) {
       var $like = layers.append( '<div class="mejs-track-actions"><button class="mejs-like-button btn btn-sm no-bg btn-icon"></button></div>' ).find( '.mejs-like-button' );
-      
+
       $like.click(function() {
           player.$node.trigger('like.mep', [$like.attr( 'track-id')] );
       });
@@ -890,7 +890,7 @@ window.mep = window.mep || {};
 
 // source
 (function( window, $, undefined ) {
-  'use strict';
+
 
   $.extend( MediaElementPlayer.prototype, {
     buildmepsource: function( player, controls, layers ) {
@@ -911,7 +911,7 @@ window.mep = window.mep || {};
 
 // buffering
 (function( window, $, undefined ) {
-  'use strict';
+
 
   $.extend( MediaElementPlayer.prototype, {
     buildmepbuffering: function(player, controls, layers, media) {
@@ -988,7 +988,7 @@ window.mep = window.mep || {};
 
 // youtube
 (function( window, $, undefined ) {
-  	'use strict';
+
 	$.extend(MediaElementPlayer.prototype, {
 	    buildyoutube: function(player, controls, layers, media) {
 	        if (media.pluginType !== 'youtube') {
@@ -1026,7 +1026,6 @@ window.mep = window.mep || {};
 
 // build list
 (function( window, $, undefined ) {
-  'use strict';
 
   $.extend( MediaElementPlayer.prototype, {
     buildmeptracklist: function( player, controls, layers ) {
