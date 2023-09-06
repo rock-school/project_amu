@@ -1,6 +1,6 @@
-import LogoSVG from './../../assets/images/logo.svg';
-import LogoPNG from './../../assets/images/logo.png';
-import a3 from './../../assets/images/a3.jpg';
+import LogoSVG from "./../../assets/images/logo.svg";
+import LogoPNG from "./../../assets/images/logo.png";
+import a3 from "./../../assets/images/a3.jpg";
 
 export default function Header() {
   return (
@@ -47,7 +47,7 @@ export default function Header() {
             </a>
             <div className="dropdown-menu w dropdown-menu-scale pull-right">
               <a className="dropdown-item" href="profile.html#profile">
-                <span>Profile</span>
+                <span>Profile1</span>
               </a>
               <a className="dropdown-item" href="profile.html#tracks">
                 <span>Tracks</span>
