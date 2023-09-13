@@ -52,7 +52,7 @@ function App() {
   return (
     <>
       <div className="app dk" id="app">
-        <div id="content" className="app-content white bg" role="main">
+        <div id="content" className="app-content white bg test-class" role="main">
           <Header />
           <div className="app-footer app-player grey bg">
             <div className="playlist" ></div>
